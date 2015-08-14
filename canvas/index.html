@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>canvas</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            /*background: #1a6426;*/
+        }
+        canvas{
+            border: 1px solid red;
+            position: absolute;
+            left: 50%;
+            margin-left: -400px;
+            top: 50%;
+            margin-top: -200px;
+        }
+    </style>
+</head>
+<body onload="draw()">
+
+    <!--canvas-->
+    <canvas id="canvas" width="800" height="400"></canvas>
+
+    <script>
+        function draw(){
+            //the rendering context
+            var canvas = document.getElementById("canvas");
+
+            //check for support
+            if(canvas.getContext){
+                var ctx = canvas.getContext('2d');
+                //drawing code here
+
+                //box1
+                ctx.fillStyle = 'rgb(200,0,0)';
+                ctx.fillRect(50,50,200,200);
+
+                //box2
+                ctx.fillStyle = 'rgba(0,0,200,.5)';
+                ctx.fillRect(90,90,200,200);
+
+                //strokeRect
+                ctx.fillStyle = 'rgb(0,255,0)';
+                ctx.fillRect(400,0,400,400);
+
+                ctx.clearRect(420,20,360,360)
+
+
+            }else{
+                //canvas-unsupported code here
+                alert("canvas-unsupported code here")
+            }
+        }
+
+
+
+    </script>
+
+</body>
+</html>

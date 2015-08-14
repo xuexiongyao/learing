@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>map</title>
+    <style>
+        .box{
+            position: relative;
+            background-color: #ff8571;
+            width: 100%;
+            height: auto;
+            text-align: center;
+        }
+        .show{
+            position: absolute;
+            left: 630px;
+            top: 460px;
+            color: #fff;
+            padding: 10px 20px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    <img src="1.jpg" alt="img" width="1021" height="887" usemap="#Map">
+
+    <div id="s-lg-1" class="show" style="background: rgba(0, 0, 0, 0.56);">
+        qinghai
+    </div>
+    <map name="Map">
+        <area id="s-lg" shape="poly" coords="296,437,284,446,301,443,302,429,307,421,296,406,299,388,337,383,350,378,363,378,375,380,381,386,398,396,406,392,412,389,415,388,428,388,431,385,437,387,445,388,451,390,455,394,460,395,464,394,467,397,468,405,473,408,480,413,488,416,495,420,496,420,498,425,506,427,508,430,509,436,513,447,517,456,517,470,510,480,505,486,501,494,498,501,483,499,484,505,491,509,501,516,507,518,508,528,493,526,498,530,487,531,483,531,480,541,473,542,452,528,440,526,433,527,427,527,421,532,414,536,413,538,412,542,409,549,406,552,403,556,401,560,399,560,396,562,388,561,375,558,375,552,361,543,351,541,315,531,288,519,275,501,280,510,268,486,269,481,274,466,276,455,276,447,298,440,300,442,305,432,296,402,296,395,297,393" href="javascript:;" target="aa" alt="wfwqdwq">
+    </map>
+</div>
+
+
+    <script src="jquery.min.js"></script>
+    <script>
+        $(function () {
+            $("#s-lg").click(function () {
+                $("#s-lg-1").slideDown()
+            })
+        })
+
+    </script>
+</body>
+</html>
